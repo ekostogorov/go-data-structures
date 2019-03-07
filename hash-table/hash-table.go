@@ -52,7 +52,7 @@ func (ht *HashTable) Remove(key string) error {
 			ht.keys = ht.keys[:len(ht.keys)-1]
 
 			copy(ht.values[i:], ht.values[i+1:])
-			ht.values[len(ht.values)-1] = 0
+			ht.values[len(ht.values)-1] = nil
 			ht.values = ht.values[:len(ht.values)-1]
 
 			return nil
